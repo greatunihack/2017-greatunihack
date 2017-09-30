@@ -3223,7 +3223,7 @@
 			.dropotron > li.active > a, .dropotron > li.active > span {
 				color: #e44c65;
 			}
-
+ 
 		.dropotron.level-0 {
 			font-size: 0.8em;
 			margin-top: 1em;
@@ -3278,7 +3278,7 @@
 
 		#header nav {
 			position: absolute;
-			right: 1em;
+			right: 10em;
 			top: 0;
 		}
 
