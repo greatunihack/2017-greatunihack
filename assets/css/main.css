@@ -1567,7 +1567,7 @@
 	}
 
 	body, input, select, textarea {
-		color: rgba(255, 255, 255, 0.75);
+		color: #d1a044;
 		font-family: "Ubuntu Mono", monospace;
 		font-size: 15pt;
 		font-weight: 100;
@@ -1590,7 +1590,7 @@
 		}
 
 	strong, b {
-		color: #ffffff;
+		color: #d1a044;
 		font-weight: 300;
 	}
 
@@ -1603,7 +1603,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #ffffff;
+		color: #d1a044;
 		font-weight: 300;
 		line-height: 1em;
 		margin: 0 0 1em 0;
@@ -2102,7 +2102,7 @@
 	}
 
 	header p {
-		color: #ffffff;
+		color: #ddcebb;
 		position: relative;
 		margin: 0 0 1.5em 0;
 	}
@@ -2134,7 +2134,7 @@
 	}
 
 		header.major:after {
-			background: #e44c65;
+			background: #ddcebb;
 			content: '';
 			display: inline-block;
 			height: 0.2em;
@@ -2153,7 +2153,7 @@
 	}
 
 	label {
-		color: #ffffff;
+		color: #d1a044;
 		display: block;
 		font-size: 0.9em;
 		font-weight: 300;
@@ -2246,7 +2246,7 @@
 
 	select option {
 		background-color: #1c1d26;
-		color: #ffffff;
+		color: #d1a044;
 	}
 
 	select:focus::-ms-value {
@@ -2441,7 +2441,6 @@
 
 				.icon.major.alt:before {
 					color: #272833 !important;
-					text-shadow: 1px 0 0 #ffffff, -1px 0 0 #ffffff, 0 1px 0 #ffffff, 0 -1px 0 #ffffff;
 				}
 
 /* Image */
@@ -2779,7 +2778,7 @@
 		input[type="reset"].special,
 		input[type="button"].special,
 		.button.special {
-			background-color: #e44c65;
+			background-color: #d1a044;
 			box-shadow: none;
 			color: #ffffff !important;
 		}
@@ -2788,7 +2787,7 @@
 			input[type="reset"].special:hover,
 			input[type="button"].special:hover,
 			.button.special:hover {
-				background-color: #e76278;
+				background-color: #b48a3a;
 			}
 
 			input[type="submit"].special:active,
@@ -2856,6 +2855,10 @@
 		overflow: hidden;
 		position: relative;
 	}
+
+		.spotlight p {
+			color: #ddcebb;
+		}
 
 		.spotlight:nth-last-of-type(1) {
 			z-index: 1;
@@ -3083,8 +3086,20 @@
 		padding: 6em 0 4em 0;
 	}
 
+		.wrapper.style1 h2 {
+			color: #d1a044;
+		}
+
+		.wrapper.style2 h2 {
+			color: #272833;
+		}
+
+		.wrapper p {
+			color: #ddcebb;
+		}
+
 		.wrapper.style2 {
-			background: #e44c65;
+			background: #d1a044;
 		}
 
 			.wrapper.style2 input[type="text"]:focus,
@@ -3118,7 +3133,7 @@
 			.wrapper.style2 input[type="reset"].special,
 			.wrapper.style2 input[type="button"].special,
 			.wrapper.style2 .button.special {
-				background-color: #ffffff;
+				background-color: #d1a044;
 				color: #e44c65 !important;
 			}
 
