@@ -4016,3 +4016,32 @@
 					}
 
 	}
+
+/* Sponsors section */
+
+#sponsors h1 {
+	font-size: 2em;
+	line-height: 1.5em;
+	margin-bottom: 0em;
+	letter-spacing: -0.025em;
+}
+#sponsors h2 {
+	font-size: 2.5em;
+	margin-top: 2em;
+}
+
+#sponsors h3 {
+	font-size: 2.25em;
+	margin-top: 2em;
+}
+
+#sponsors h4 {
+	font-size: 2em;
+	margin-top: 2em;
+}
+
+#sponsors h5 {
+	font-size: 1.25em;
+	margin-top: 2em;
+}
+
