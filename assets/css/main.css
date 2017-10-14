@@ -2650,7 +2650,7 @@
 
         table td {
             padding: 0.1em 0.0em;
-            text-align: right;
+            text-align: center;
         }
 	
 	table td:first-child {
@@ -2661,10 +2661,11 @@
 
         table th {
             color: #ffffff;
-            font-size: 0.9em;
+            font-size: 1.1em;
             font-weight: 300;
-            padding: 0 0.75em 0.75em 0.75em;
-            text-align: left;
+            margin: auto;
+            padding: 0.0em 0.0em 0.0em 20%;
+            text-align: center;
         }
 
         table thead {
