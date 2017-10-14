@@ -2645,12 +2645,17 @@
         }
 
             table tbody tr:nth-child(2n + 1) {
-                background-color: rgba(255, 255, 255, 0.075);
+                background-color: rgba(255, 255, 255, 0.035);
             }
 
         table td {
-            padding: 0.75em 0.75em;
+            padding: 0.0em 0.0em;
         }
+	
+	table td:first-child {
+            width: 1%;
+	    white-space: nowrap;
+	}
 
         table th {
             color: #ffffff;
@@ -2673,17 +2678,17 @@
         }
 
             table.alt tbody tr td {
-                border: solid 1px rgba(255, 255, 255, 0.3);
+                border: solid 1px rgba(255, 255, 255, 0.0);
                 border-left-width: 0;
                 border-top-width: 0;
             }
 
                 table.alt tbody tr td:first-child {
-                    border-left-width: 1px;
+                    border-left-width: 0px;
                 }
 
             table.alt tbody tr:first-child td {
-                border-top-width: 1px;
+                border-top-width: 0px;
             }
 
             table.alt thead {
