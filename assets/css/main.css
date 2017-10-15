@@ -2637,6 +2637,12 @@
         margin: 0 0 2em 0;
         width: 100%;
     }
+    
+    table caption {
+        color: #ffd5bb;
+        font-size: 1.2em;
+        padding-bottom: 0.5em;
+    }
 
         table tbody tr {
             border: solid 1px rgba(255, 255, 255, 0.3);
