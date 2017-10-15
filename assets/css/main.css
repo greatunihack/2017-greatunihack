@@ -4024,6 +4024,11 @@
 
 /* Sponsors section */
 
+#sponsors {
+    background-color: #272833;
+    width: 100%;
+}
+
 #sponsors h1 {
     font-size: 2em;
     line-height: 1.5em;
