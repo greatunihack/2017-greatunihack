@@ -2980,7 +2980,7 @@
             -webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
             -ms-transition: -ms-transform 1s ease, opacity 1s ease;
             transition: transform 1s ease, opacity 1s ease;
-            background: rgba(23, 24, 32, 0.95);
+            background: rgba(17, 17, 27, 0.95);
             border-style: solid;
             opacity: 1;
             position: absolute;
@@ -3440,7 +3440,7 @@
 /* Footer */
 
     #footer {
-        background: #272833;
+        background: #11111b;
         padding: 6em 0;
         text-align: center;
     }
@@ -3578,7 +3578,7 @@
                 }
 
                 .spotlight .content {
-                    background-color: #1c1d26;
+                    background-color: #11111b;
                     border-width: 0 !important;
                     border-top-width: 0.35em !important;
                     bottom: auto !important;
@@ -4031,7 +4031,7 @@
 /* Sponsors section */
 
 #sponsors {
-    background-color: #272833;
+    background-color: #11111b;
     width: 100%;
 }
 
