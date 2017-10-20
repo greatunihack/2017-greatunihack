@@ -2637,6 +2637,12 @@
         margin: 0 0 2em 0;
         width: 100%;
     }
+    
+    table caption {
+        color: #ffd5bb;
+        font-size: 1.2em;
+        padding-bottom: 0.5em;
+    }
 
         table tbody tr {
             border: solid 1px rgba(255, 255, 255, 0.3);
@@ -2645,19 +2651,27 @@
         }
 
             table tbody tr:nth-child(2n + 1) {
-                background-color: rgba(255, 255, 255, 0.075);
+                background-color: rgba(255, 255, 255, 0.035);
             }
 
         table td {
-            padding: 0.75em 0.75em;
+            padding: 0.1em 0.0em;
+            text-align: center;
         }
+	
+	table td:first-child {
+            width: 1%;
+	    white-space: nowrap;
+            text-align: left;
+	}
 
         table th {
             color: #ffffff;
-            font-size: 0.9em;
+            font-size: 1.1em;
             font-weight: 300;
-            padding: 0 0.75em 0.75em 0.75em;
-            text-align: left;
+            margin: auto;
+            padding: 0 0 0 20%;
+            text-align: center;
         }
 
         table thead {
@@ -2673,17 +2687,16 @@
         }
 
             table.alt tbody tr td {
-                border: solid 1px rgba(255, 255, 255, 0.3);
                 border-left-width: 0;
                 border-top-width: 0;
             }
 
                 table.alt tbody tr td:first-child {
-                    border-left-width: 1px;
+                    border-left-width: 0px;
                 }
 
             table.alt tbody tr:first-child td {
-                border-top-width: 1px;
+                border-top-width: 0px;
             }
 
             table.alt thead {
@@ -4016,6 +4029,11 @@
     }
 
 /* Sponsors section */
+
+#sponsors {
+    background-color: #272833;
+    width: 100%;
+}
 
 #sponsors h1 {
     font-size: 2em;
