@@ -4065,7 +4065,7 @@
 /* Map section */
 
 #map {
-    height: 60vh;
+    height: 400px;
     width: 80%;
 
     display: block;
