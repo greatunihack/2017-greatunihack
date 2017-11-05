@@ -4064,13 +4064,72 @@
 
 
 /* Map */
-
+#location {
+    background-color: #11111b;
+}
+#faq {
+    background-color: #11111b;
+}
 #map {
     height: 400px;
     width: 80%;
-
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1em;
+}
+#apply h2 {
+    font-size: 1.3em;
+}
+
+/* Team */
+/* Three columns side by side */
+.column {
+    float: left;
+    max-width: 25%;
+    margin-bottom: 16px;
+    margin-left: 4%;
+    margin-right: 4%;
+    padding: 0 8px;
+    display: inline-block;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media (max-width: 650px) {
+    .column {
+        width: 92%;
+        max-width: 100%;
+        display: block;
+    }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 0 16px;
+}
+
+/* Clear floats */
+#team .card::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: grey;
+}
+
+#team a.button {
+    padding: 0 0;
+    border: none;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+    width: 80%;
+    vertical-align: center;
+}
+
+#team h2 {
+    font-size: 1.3em;
 }
