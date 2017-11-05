@@ -4144,7 +4144,7 @@
     margin-bottom: 0.3em;
 }
 
-.card {
+.cardcontent {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: #25252f;
     padding: 0 16px;
@@ -4166,4 +4166,12 @@
     content: "";
     clear: both;
     display: table;
+}
+
+/* Info page floor plans */
+
+#floorimage {
+    background-color: #ffffff;
+    border: 2px solid #d1a044;
+    border-radius: 20px;
 }
