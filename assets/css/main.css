@@ -4137,7 +4137,7 @@
 /* Info page challenges */
 
 .cardtitle {
-    border:1px solid #444444; 
+    border:1px solid #444444;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: #303039;
     padding: 0 16px;
@@ -4153,13 +4153,13 @@
 }
 
 @media screen and (max-width: 980px) {
-  .card {
-    height: 100%;
-  }
+    .card {
+        height: 100%;
+    }
 }
 
 .cardtitle h3, p {
-  margin: 0 0 0 0;
+    margin: 0 0 0 0;
 }
 
 .card::after {
