@@ -4153,16 +4153,16 @@
 }
 
 @media screen and (max-width: 980px) {
-    .card {
+    .cardcontent {
         height: 100%;
     }
 }
 
-.cardtitle h3, p {
+.cardtitle h3, .cardtitle p {
     margin: 0 0 0 0;
 }
 
-.card::after {
+.cardcontent::after {
     content: "";
     clear: both;
     display: table;
