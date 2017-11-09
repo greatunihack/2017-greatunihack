@@ -1,4 +1,5 @@
 var database;
+var data = {};
 
 $(document).ready(function() {
   // Initialize Firebase
@@ -11,11 +12,21 @@ $(document).ready(function() {
   var database = firebase.database();
   var ref = database.ref('/');
   ref.on('value', gotData, errData);
+
+  setInterval(updateSchedule, 60 * 1000); // update every minute
 })
 
+function getTime() {
+  var now = new Date();
+  var time = now.toLocaleTimeString();
+  return time.substring(0, 5);
+}
 function gotData(data) {
   data = data.val();
-  console.log(data);
+  updateSchedule();
+}
+
+function updateSchedule() {
   var events = data.events;
   var eventImage = "images/guh_honeycomb.png"
   var beeImage = "images/guh_logo.png"
@@ -29,7 +40,29 @@ function gotData(data) {
       return event.time;
     });
 
-    var activeEvents = _.filter(dayEvents, function(event) {
+    var now = getTime();
+    var today = new Date();
+    var dates = {
+      saturday: new Date("Nov 11 2017"),
+      sunday: new Date("Nov 12 2017")
+    };
+
+
+    var activeEvents = _.filter(dayEvents, function(event, index) {
+      var active = today.toDateString() === dates[day].toDateString();
+      active = active && now >= event.time;
+      if (index+1<dayEvents.length) { // do we have other events after this? 
+        var nextIndex=index+1;
+        while (dayEvents[nextIndex].time == event.time) { // let's find the first event that doesn't happen at this time!
+          nextIndex++;
+          if (nextIndex >= dayEvents.length)
+            break;
+        }
+        if (nextIndex<dayEvents.length)
+          active = active && now < dayEvents[nextIndex].time;
+      }
+
+      event.active = active;
       return event.active;
     });
     var firstActiveTime = activeEvents.length > 0 ? activeEvents[0].time : "00:00";
