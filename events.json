@@ -1,0 +1,89 @@
+{
+  "events": {
+    "saturday": {
+      "registration": {
+        "label": "Registration",
+        "time": "09:00",
+        "active": true
+      },
+      "breakfast": {
+        "label": "Breakfast",
+        "time": "09:30"
+      },
+      "opening ceremony": {
+        "label": "Opening Ceremony",
+        "time": "10:30"
+      },
+      "hacking starts": {
+        "label": "Hacking Starts",
+        "time": "12:00"
+      },
+      "team forming session": {
+        "label": "Team Forming Session",
+        "time": "12:00"
+      },
+      "workshop amex": {
+        "label": "Workshop: American Express",
+        "time": "13:00"
+      },
+      "lunch": {
+        "label": "Lunch",
+        "time": "14:00"
+      },
+      "workshop web apps": {
+        "label": "Workshop: Web Applications UK",
+        "time": "15:00"
+      },
+      "workshop ocado": {
+        "label": "Workshop: Ocado",
+        "time": "16:30"
+      },
+      "workshop auto trader": {
+        "label": "Workshop: Auto Trader UK",
+        "time": "18:00"
+      },
+      "dinner": {
+        "label": "Dinner",
+        "time": "18:30"
+      },
+      "workshop goldman": {
+        "label": "Workshop: Goldman Sachs",
+        "time": "19:30"
+      }
+    },
+    "sunday": {
+      "midnight snack": {
+        "label": "Midnight Snack",
+        "time": "00:00"
+      },
+      "breakfast": {
+        "label": "Breakfast",
+        "time": "06:00"
+      },
+      "workshop cv": {
+        "label": "<i>Workshop:</i> CV",
+        "time": "10:00"
+      },
+      "hacking ends": {
+        "label": "hacking ends",
+        "time": "11:30"
+      },
+      "lunch": {
+        "label": "Lunch",
+        "time": "11:30"
+      },
+      "judging": {
+        "label": "Judging",
+        "time": "12:30"
+      },
+      "closing ceremony": {
+        "label": "Closing Ceremony",
+        "time": "14:00"
+      },
+      "end of event": {
+        "label": "End of the Event",
+        "time": "16:00"
+      }
+    }
+  }
+}
