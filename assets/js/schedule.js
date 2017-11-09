@@ -1,7 +1,7 @@
 var database;
 var data = {};
 
-$(document).ready(function() {
+$(document).ready(function () {
   // Initialize Firebase
   var config = {
     databaseURL: "https://greatunihack-6f7cd.firebaseio.com",
@@ -21,8 +21,8 @@ function getTime() {
   var time = now.toLocaleTimeString();
   return time.substring(0, 5);
 }
-function gotData(data) {
-  data = data.val();
+function gotData(newData) {
+  data = newData.val();
   updateSchedule();
 }
 
@@ -31,12 +31,12 @@ function updateSchedule() {
   var eventImage = "images/guh_honeycomb.png"
   var beeImage = "images/guh_logo.png"
 
-  
+
   $("#saturday").html("");
   $("#sunday").html("");
-  _.forEach(["saturday", "sunday"], function(day) {
+  _.forEach(["saturday", "sunday"], function (day) {
     var dayEvents = events[day];
-    dayEvents = _.sortBy(dayEvents, function(event) {
+    dayEvents = _.sortBy(dayEvents, function (event) {
       return event.time;
     });
 
@@ -48,17 +48,17 @@ function updateSchedule() {
     };
 
 
-    var activeEvents = _.filter(dayEvents, function(event, index) {
+    var activeEvents = _.filter(dayEvents, function (event, index) {
       var active = today.toDateString() === dates[day].toDateString();
       active = active && now >= event.time;
-      if (index+1<dayEvents.length) { // do we have other events after this? 
-        var nextIndex=index+1;
+      if (index + 1 < dayEvents.length) { // do we have other events after this? 
+        var nextIndex = index + 1;
         while (dayEvents[nextIndex].time == event.time) { // let's find the first event that doesn't happen at this time!
           nextIndex++;
           if (nextIndex >= dayEvents.length)
             break;
         }
-        if (nextIndex<dayEvents.length)
+        if (nextIndex < dayEvents.length)
           active = active && now < dayEvents[nextIndex].time;
       }
 
@@ -67,10 +67,10 @@ function updateSchedule() {
     });
     var firstActiveTime = activeEvents.length > 0 ? activeEvents[0].time : "00:00";
 
-    _.forEach(dayEvents, function(event, index) {
+    _.forEach(dayEvents, function (event, index) {
       var imageSrc = event.active ? beeImage : eventImage
-  
-      var image='<img src="'+imageSrc+'"style="width:30px;	vertical-align: middle; " />'
+
+      var image = '<img src="' + imageSrc + '"style="width:30px;	vertical-align: middle; " />'
       if (!event.active) image = "";
       var label = event.label;
       var time = event.time;
@@ -78,15 +78,15 @@ function updateSchedule() {
         label = "<b class='active'>" + label + "</b>"
         time = "<b class='active'>" + time + "</b>"
       } else if (event.time < firstActiveTime) {
-        label = "<s>"+label+"</s>";
-        time = "<s>"+time+"</s>";
+        label = "<s>" + label + "</s>";
+        time = "<s>" + time + "</s>";
       }
       if (!event.active) {
         label = "<span class='inactive'>" + label + "</span>"
         time = "<span class='inactive'>" + time + "</span>"
       }
 
-      $("#"+day).append('<tr><td>'+image+'</td><td>'+time+'</td><td>'+label+'</td></tr>');
+      $("#" + day).append('<tr><td>' + image + '</td><td>' + time + '</td><td>' + label + '</td></tr>');
     })
   })
 }
