@@ -23,18 +23,16 @@ function gotData(data) {
   
   $("#saturday").html("");
   $("#sunday").html("");
-  _.forEach([1, 2], function(day) {
-    var dayEvents = _.filter(events, function(event) {
-      return event.day == day;
-    });
+  _.forEach(["saturday", "sunday"], function(day) {
+    var dayEvents = events[day];
     dayEvents = _.sortBy(dayEvents, function(event) {
-      return event.order;
+      return event.time;
     });
 
     var activeEvents = _.filter(dayEvents, function(event) {
       return event.active;
     });
-    var firstActiveOrder = activeEvents.length > 0 ? activeEvents[0].order : -1;
+    var firstActiveTime = activeEvents.length > 0 ? activeEvents[0].time : "00:00";
 
     _.forEach(dayEvents, function(event, index) {
       var imageSrc = event.active ? beeImage : eventImage
@@ -46,7 +44,7 @@ function gotData(data) {
       if (event.active) {
         label = "<b class='active'>" + label + "</b>"
         time = "<b class='active'>" + time + "</b>"
-      } else if (event.order < firstActiveOrder) {
+      } else if (event.time < firstActiveTime) {
         label = "<s>"+label+"</s>";
         time = "<s>"+time+"</s>";
       }
@@ -55,7 +53,7 @@ function gotData(data) {
         time = "<span class='inactive'>" + time + "</span>"
       }
 
-      $(day==1?"#saturday":"#sunday").append('<tr><td>'+image+'</td><td>'+time+'</td><td>'+label+'</td></tr>');
+      $("#"+day).append('<tr><td>'+image+'</td><td>'+time+'</td><td>'+label+'</td></tr>');
     })
   })
 }
