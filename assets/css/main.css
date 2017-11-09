@@ -4133,3 +4133,45 @@
 #team h2 {
     font-size: 1.3em;
 }
+
+/* Info page challenges */
+
+.cardtitle {
+    border:1px solid #444444;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #303039;
+    padding: 0 16px;
+    margin-bottom: 0.3em;
+}
+
+.cardcontent {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #25252f;
+    padding: 0 16px;
+    margin-bottom: 1em;
+    height: 20em;
+}
+
+@media screen and (max-width: 980px) {
+    .cardcontent {
+        height: 100%;
+    }
+}
+
+.cardtitle h3, .cardtitle p {
+    margin: 0 0 0 0;
+}
+
+.cardcontent::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Info page floor plans */
+
+#floorimage {
+    background-color: #ffffff;
+    border: 2px solid #d1a044;
+    border-radius: 20px;
+}
