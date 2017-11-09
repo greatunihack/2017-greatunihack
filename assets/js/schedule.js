@@ -29,18 +29,18 @@ class Schedule {
     return Promise.resolve({
       new: true,
       events: [
-        { id: 0, label: 'Registration', time: 9 },
-        { id: 1, label: 'Breakfast', time: 9.5 },
-        { id: 2, label: 'Opening Ceremony', time: 10.5 },
-        { id: 3, label: 'Hacking Starts', time: 12 },
-        { id: 4, label: 'Team Forming Session', time: 12 },
-        { id: 5, label: 'Workshop: American Express', time: 13 },
-        { id: 6, label: 'Lunch', time: 14 },
-        { id: 7, label: 'Workshop: Web Applications UK', time: 15 },
-        { id: 8, label: 'Workshop: Ocado', time: 16.5 },
-        { id: 9, label: 'Workshop: Auto Trader UK', time: 18 },
-        { id: 10, label: 'Dinner', time: 18.5 },
-        { id: 11, label: 'Workshop: Goldman Sachs', time: 19.5 },
+        { id: 0, label: 'Registration', time: "09:00" },
+        { id: 1, label: 'Breakfast', time: "09:30" },
+        { id: 2, label: 'Opening Ceremony', time: "10:30" },
+        { id: 3, label: 'Hacking Starts', time:"12:00" },
+        { id: 4, label: 'Team Forming Session', time: "12:00" },
+        { id: 5, label: 'Workshop: American Express', time: "13:00" },
+        { id: 6, label: 'Lunch', time: "14:00" },
+        { id: 7, label: 'Workshop: Web Applications UK', time: "15:00" },
+        { id: 8, label: 'Workshop: Ocado', time: "16:30" },
+        { id: 9, label: 'Workshop: Auto Trader UK', time: "18:00" },
+        { id: 10, label: 'Dinner', time: "18:30" },
+        { id: 11, label: 'Workshop: Goldman Sachs', time: "19:30" },
       ],
       active: this._active
     })
@@ -56,6 +56,7 @@ class Schedule {
   }
 
   createSchedule() {
+    return
     var container = document.getElementById('mynetwork');
 
     // provide the data in the vis format
@@ -83,9 +84,19 @@ class Schedule {
     this.network = new vis.Network(container, visData, options);
   }
   async updateSchedule(data) {
-
     const eventImage = "images/guh_honeycomb.png"
     const beeImage = "images/guh_logo.png"
+
+    $("#saturday").html("")
+    data.events.forEach((event, index) => {
+      const imageSrc = event.id == data.active ? beeImage : eventImage
+
+      const image=`<img src=${imageSrc} style="width:30px;	vertical-align: middle; " />`
+      $("#saturday").append(`<tr><td>${image}</td><td>${event.time}</td><td>${event.label}</td></tr>`)
+    })
+
+    return
+
     const nodeOptions = {
       shape: 'image',
       allowedToMoveX: false,
