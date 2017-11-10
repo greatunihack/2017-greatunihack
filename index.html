@@ -35,8 +35,10 @@
 
         <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
         <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/schedule.css" />
         <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
         <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
     </head>
     <body class="landing">
         <div id="page-wrapper">
@@ -335,6 +337,7 @@
                 <div class="container">
                     <header class="major">
                         <h2>Schedule</h2>
+                        <noscript><h3>Please enable JavaScript to view live schedule.</h3></noscript>                        
                     </header>
 
                     <div class="box alt">
@@ -343,55 +346,8 @@
                             <div class="table-wrapper 4u 6u(small) 12u(xsmall)">
                                 <table class="alt">
                                     <caption>SATURDAY</caption>
-                                    <tbody>
-                                        <tr>
-                                            <td>09:00</td>
-                                            <td>Registration</td>
-                                        </tr>
-                                        <tr>
-                                            <td>09:30</td>
-                                            <td>Breakfast</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10:30</td>
-                                            <td>Opening Ceremony</td>
-                                        </tr>
-                                        <tr>
-                                            <td>12:00</td>
-                                            <td>Hacking Starts</td>
-                                        </tr>
-                                        <tr>
-                                            <td>12:00</td>
-                                            <td>Team Forming Session</td>
-                                        </tr>
-                                        <tr>
-                                            <td>13:00</td>
-                                            <td><i>Workshop:</i> American Express</td>
-                                        </tr>
-                                        <tr>
-                                            <td>14:00</td>
-                                            <td>Lunch</td>
-                                        </tr>
-                                        <tr>
-                                            <td>15:00</td>
-                                            <td><i>Workshop:</i> Web Applications UK</td>
-                                        </tr>
-                                        <tr>
-                                            <td>16:30</td>
-                                            <td><i>Workshop:</i> Ocado</td>
-                                        </tr>
-                                        <tr>
-                                            <td>18:00</td>
-                                            <td><i>Workshop:</i> Auto Trader UK</td>
-                                        </tr>
-                                        <tr>
-                                            <td>18:30</td>
-                                            <td>Dinner</td>
-                                        </tr>
-                                        <tr>
-                                            <td>19:30</td>
-                                            <td><i>Workshop:</i> Goldman Sachs Workshop</td>
-                                        </tr>
+                                    <tbody id="saturday">
+                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -399,39 +355,8 @@
                             <div class="table-wrapper 4u 6u(small) 12u(xsmall)">
                                 <table class="alt">
                                     <caption>SUNDAY</caption>
-                                    <tbody>
-                                        <tr>
-                                            <td>00:00</td>
-                                            <td>Midnight Snack</td>
-                                        </tr>
-                                        <tr>
-                                            <td>06:00</td>
-                                            <td>Breakfast</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10:00</td>
-                                            <td><i>Workshop:</i> CV</td>
-                                        </tr>
-                                        <tr>
-                                            <td>11:30</td>
-                                            <td>Hacking Ends</td>
-                                        </tr>
-                                        <tr>
-                                            <td>11:30</td>
-                                            <td>Lunch</td>
-                                        </tr>
-                                        <tr>
-                                            <td>12:30</td>
-                                            <td>Judging</td>
-                                        </tr>
-                                        <tr>
-                                            <td>14:00</td>
-                                            <td>Closing Ceremony</td>
-                                        </tr>
-                                        <tr>
-                                            <td>16:00</td>
-                                            <td>End of the Event</td>
-                                        </tr>
+                                    <tbody id="sunday">
+                                     
                                     </tbody>
                                 </table>
                             </div>
@@ -489,8 +414,11 @@
         <script src="assets/js/util.js"></script>
         <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
         <script src="assets/js/main.js"></script>
+        <script src="assets/js/schedule.js"></script>
 
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false&libraries=places"></script>
         <script src="assets/js/google_map.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
     </body>
 </html>
