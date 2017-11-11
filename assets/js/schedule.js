@@ -16,10 +16,18 @@ $(document).ready(function () {
   setInterval(updateSchedule, 60 * 1000); // update every minute
 })
 
-function getTime() {
-  var now = new Date();
-  var time = now.toLocaleTimeString();
-  return time.substring(0, 5);
+function getToday() {
+  // always check for GMT+0.
+  var timezone = 'Europe/London';
+  
+  var now = moment().tz(timezone);
+  var time = now.format('HH:mm');
+  var date = now.format('MMM D YYYY');
+
+  return {
+    time: time,
+    date: date
+  }
 }
 function gotData(newData) {
   data = newData.val();
@@ -31,6 +39,14 @@ function updateSchedule() {
   var eventImage = "images/guh_honeycomb.png"
   var beeImage = "images/guh_logo.png"
 
+  var todayDate = getToday();
+  var now = todayDate.time;
+  var today = new Date(todayDate.date);
+  
+  var dates = {
+    saturday: new Date("Nov 11 2017"),
+    sunday: new Date("Nov 12 2017")
+  };
 
   $("#saturday").html("");
   $("#sunday").html("");
@@ -39,14 +55,6 @@ function updateSchedule() {
     dayEvents = _.sortBy(dayEvents, function (event) {
       return event.time;
     });
-
-    var now = getTime();
-    var today = new Date();
-    var dates = {
-      saturday: new Date("Nov 11 2017"),
-      sunday: new Date("Nov 12 2017")
-    };
-
 
     var activeEvents = _.filter(dayEvents, function (event, index) {
       var active = today.toDateString() === dates[day].toDateString();
